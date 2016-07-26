@@ -16,6 +16,8 @@ graylog:
     GRAYLOG_REST_TRANSPORT_URI: http://ip-address:12900
 ```
 
+**Note**: password-sha2 is generated with `echo -n yourpassword | shasum -a 256`
+
 Start service by run the following
 
 ```
