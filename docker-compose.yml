@@ -1,12 +1,15 @@
 mongo:
   image: "mongo:3"
+  container_name: graylog-mongo
 elasticsearch:
   image: "elasticsearch:2"
+  container_name: graylog-elasticsearch
   command: "elasticsearch -Des.cluster.name='graylog'"
   volumes:
     - /opt/graylog/data/elasticsearch:/usr/share/elasticsearch/data
 graylog:
   image: graylog2/server:2.0.0-1
+  container_name: graylog-server
   volumes:
     - /opt/graylog/data/journal:/usr/share/graylog/data/journal
     - /opt/graylog/config:/usr/share/graylog/data/config
