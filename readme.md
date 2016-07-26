@@ -6,6 +6,16 @@ The source files for this project can be found here: https://github.com/taladock
 
 ## Running
 
+```
+cd /opt
+git clone {graylog-git-repo}
+mkdir -p /opt/graylog/data/journal
+groupadd -g 1100 graylog
+useradd -g 1100 -u 1100 graylog
+chown -R graylog:graylog /opt/graylog
+cd graylog
+```
+
 Create new docker-compose config *docker-compose.prod.yml*
 
 ```
