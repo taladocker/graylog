@@ -8,7 +8,7 @@ The source files for this project can be found here: https://github.com/taladock
 
 ```
 cd /opt
-git clone {graylog-git-repo}
+git clone https://github.com/taladocker/graylog.git
 groupadd -g 1100 graylog
 useradd -g 1100 -u 1100 graylog
 chown -R graylog:graylog /opt/graylog
@@ -40,3 +40,5 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 docker exec -it graylog-server bash -c "cd /usr/share/graylog/plugin; wget https://github.com/Graylog2/graylog-plugin-slack/releases/download/2.2.1/graylog-plugin-slack-2.2.1.jar"
 ```
+
+**Note**: Restart graylog server after installing plugin.
