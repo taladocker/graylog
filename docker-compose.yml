@@ -8,7 +8,7 @@ elasticsearch:
   volumes:
     - /opt/graylog/data/elasticsearch:/usr/share/elasticsearch/data
 graylog:
-  image: graylog2/server:2.0.0-1
+  image: graylog2/server:2.1.0-1
   container_name: graylog-server
   volumes:
     - /opt/graylog/data/journal:/usr/share/graylog/data/journal
@@ -16,7 +16,7 @@ graylog:
   environment:
     GRAYLOG_PASSWORD_SECRET: tiki@1234
     GRAYLOG_ROOT_PASSWORD_SHA2: 4ed84f76c1192d353592374aead0b5fdaabe6886f8a09af9bbb1d7d534438863
-    GRAYLOG_REST_TRANSPORT_URI: http://52.77.222.248:12900
+    GRAYLOG_REST_TRANSPORT_URI: http://127.0.0.1:12900
   links:
     - mongo:mongo
     - elasticsearch:elasticsearch
