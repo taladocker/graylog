@@ -8,7 +8,7 @@ elasticsearch:
   volumes:
     - /opt/graylog/data/elasticsearch:/usr/share/elasticsearch/data
 graylog:
-  image: graylog2/server:2.1.0-1
+  image: graylog2/server:2.1.1
   container_name: graylog-server
   volumes:
     - /opt/graylog/data/journal:/usr/share/graylog/data/journal
